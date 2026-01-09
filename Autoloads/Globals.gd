@@ -11,4 +11,5 @@ func _ready() -> void:
 
 func _on_load_main_scene() -> void :
 	# Called when the Main Scene has succesfully finish loading.
+	Scenes.main_scene = main_scene
 	pass
