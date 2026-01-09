@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GravityGodotBoilerplate"
+run/main_scene="uid://ktcgdyaa8xqb"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://Common/icon.svg"
+
+[autoload]
+
+Globals="*res://Autoloads/Globals.gd"
+Managers="*res://Autoloads/Managers.gd"
+Scenes="*res://Autoloads/Scenes.gd"
+SignalBus="*res://Autoloads/SignalBus.gd"
+Utils="*res://Autoloads/Utils.gd"
+SaveTools="*res://Autoloads/SaveTools.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fancy_folder_colors/plugin.cfg", "res://addons/fancy_folder_icons/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Data/": "pink",
+"res://Managers/": "teal",
+"res://Scenes/": "green"
+}
+
+[input]
+
+leftPedal={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
+]
+}
+rightPedal={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":5,"axis_value":1.0,"script":null)
+]
+}
+
+[physics]
+
+common/physics_ticks_per_second=240
+2d/default_gravity=2000.0
